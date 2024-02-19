@@ -2,8 +2,8 @@ import React from "react";
 import CategoryContainer from "./components/CategoryContainer/CategoryContainer";
 import Header from "./components/Header/Header";
 import "./App.css";
-import { CategoryProvider } from "./components/Contexts/CategoryContext";
-import { DataProvider } from "./components/Contexts/DataContext";
+import { CategoryProvider } from "./contexts/CategoryContext";
+import { DataProvider } from "./contexts/DataContext";
 import Form from "./components/Form/Form";
 
 const App = () => {

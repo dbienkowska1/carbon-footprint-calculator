@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import CategoryContext from "../Contexts/CategoryContext";
+import CategoryContext from "../../contexts/CategoryContext";
 import categories from "../../constants/categories";
 import "./CategoryContainer.css";
-import DataContext from "../Contexts/DataContext";
+import DataContext from "../../contexts/DataContext";
 
 const CategoryContainer = () => {
   const { selectedCategory, setSelectedCategory } = useContext(CategoryContext);

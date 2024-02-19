@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import CategoryContext from "../Contexts/CategoryContext";
+import CategoryContext from "../../contexts/CategoryContext";
 import categories from "../../constants/categories";
-import DataContext from "../Contexts/DataContext";
+import DataContext from "../../contexts/DataContext";
 import Input from "../Input/Input";
 import "./InputData.css";
 import PropTypes from "prop-types";

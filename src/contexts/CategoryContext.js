@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import categories from "../../constants/categories";
+import categories from "../constants/categories";
 
 const CategoryContext = createContext();
 

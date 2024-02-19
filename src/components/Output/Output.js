@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import DataContext from "../Contexts/DataContext";
-import CategoryContext from "../Contexts/CategoryContext";
+import DataContext from "../../contexts/DataContext";
+import CategoryContext from "../../contexts/CategoryContext";
 import categories from "../../constants/categories";
 import "./Output.css";
 import PropTypes from "prop-types";
@@ -48,7 +48,7 @@ const Output = ({ setInputErrors }) => {
         method: "POST",
         headers: {
           "content-type": "application/x-www-form-urlencoded",
-          "X-RapidAPI-Key": process.env.API_KEY,
+          "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
           "X-RapidAPI-Host": "tracker-for-carbon-footprint-api.p.rapidapi.com",
         },
         body: new URLSearchParams({
@@ -60,7 +60,7 @@ const Output = ({ setInputErrors }) => {
       try {
         const response = await fetch(url, options);
         const res = await response.text();
-        setResult(res);
+        setResult(res.message);
       } catch (error) {
         console.error(error);
       }
