@@ -1,0 +1,39 @@
+.single-input {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+}
+
+.single-input label {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--very-dark-green);
+  font-weight: 600;
+}
+
+.single-input input {
+  width: 300px;
+  height: 60px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  position: relative;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.single-input span {
+  margin-top: 10px;
+  color: var(--red);
+  font-size: 18px;
+}
+
+.box {
+  position: relative;
+}
+
+.unit {
+  position: absolute;
+  right: 5%;
+  bottom: 30%;
+}
