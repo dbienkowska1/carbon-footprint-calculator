@@ -4,6 +4,7 @@ import CategoryContext from "../../contexts/CategoryContext";
 import categories from "../../constants/categories";
 import "./Output.css";
 import PropTypes from "prop-types";
+import { toast } from "react-toastify";
 
 const Output = ({ setInputErrors }) => {
   const [result, setResult] = useState("");
@@ -60,7 +61,10 @@ const Output = ({ setInputErrors }) => {
       try {
         const response = await fetch(url, options);
         const res = await response.text();
-        setResult(res.message);
+
+        if (!res.message && !res.message !== 0)
+          toast.error("Error during fetching data from API");
+        else setResult(res.message);
       } catch (error) {
         console.error(error);
       }
